@@ -22,24 +22,24 @@ public class Main {
         BufferedReader br = new BufferedReader(isr);
         System.out.println("1.3 ------------------ ");
         System.out.println("Введите первое натуральное число:");
-        /*int q = Integer.parseInt(br.readLine());
+        int q = Integer.parseInt(br.readLine());
         System.out.println("Введите второе натуральное число:");
         int w = Integer.parseInt(br.readLine());
-        System.out.println(q + " / " + w + " = " + q/w + " и " + q%w + " в остатке");*/
+        System.out.println(q + " / " + w + " = " + q/w + " и " + q%w + " в остатке");
 
         //-------------task 2.1
-        /*System.out.println("2.1 ------------------ \nВведите натуральное двузначное число:");
+        System.out.println("2.1 ------------------ \nВведите натуральное двузначное число:");
         int n = Integer.parseInt(br.readLine());
-        System.out.println("Cумма цифр числа "+ n + " равна " + (n/10 + n%10));*/
+        System.out.println("Cумма цифр числа "+ n + " равна " + (n/10 + n%10));
 
         //-------------task 2.2
-        /*System.out.println("2.2 ------------------ \nВведите натуральное трехзначное число:");
+        System.out.println("2.2 ------------------ \nВведите натуральное трехзначное число:");
         int n1 = Integer.parseInt(br.readLine());
         //System.out.println(n1/100 +"  " + (n1-(n1/100)*100)/10 + "  " + n1%10);
-        System.out.println("Cумма цифр числа "+ n1 + " равна " + (n1/100 + (n1-(n1/100)*100)/10 + n1%10));*/
+        System.out.println("Cумма цифр числа "+ n1 + " равна " + (n1/100 + (n1-(n1/100)*100)/10 + n1%10));
 
         //--------------task 2.4
-        /*System.out.println("2.4 ------------------ \nВведите вещественное число с ненулевой частью после запятой:");
+        System.out.println("2.4 ------------------ \nВведите вещественное число с ненулевой частью после запятой:");
         double d = Double.parseDouble(br.readLine());
         int res = (int) d;
         double res2 = d - res;
@@ -50,10 +50,10 @@ public class Main {
         else
         {
             System.out.println("Округляем: " + res);
-        }*/
+        }
 
         //--------------task 3.1
-        /*System.out.println("3.1 ------------------ \nВведите натуральное число:");
+        System.out.println("3.1 ------------------ \nВведите натуральное число:");
         int nn = Integer.parseInt(br.readLine());
         if (nn%2 == 0)
         {
@@ -62,21 +62,21 @@ public class Main {
         else
         {
             System.out.println("Число " + nn + " нечетное");
-        }*/
+        }
 
         //---------task 3.2
-        /*System.out.println("3.2 ------------------ \nВведите первое вещественное число:");
+        System.out.println("3.2 ------------------ \nВведите первое вещественное число:");
         double m1 = Double.parseDouble(br.readLine());
         System.out.println("Введите второе вещественное число:");
         double m2 = Double.parseDouble(br.readLine());
         if (Math.abs(m1-10) > Math.abs(m2-10))
         {
-            System.out.println(m2);
+            System.out.println("Число " + m2 + " ближе к 10");
         }
         else
         {
-            System.out.println(m1);
-        }*/
+            System.out.println("Число " + m1 + " ближе к 10");
+        }
 
         //-----------task 3.3
         System.out.println("3.3 ------------------ \nВведите натуральное трехзначное число:");
