@@ -3,8 +3,7 @@ package ua.epam;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-
-
+import java.util.Random;
 
 public class Main {
     public static final String ANSI_RED = "\u001B[31m";
@@ -49,6 +48,10 @@ public class Main {
             try {
                 System.out.println("2.1 ------------------ \nВведите натуральное двузначное число:");
                 int n = Integer.parseInt(br.readLine());
+                if ((n/100 != 0) || (n/10 == 0))
+                {
+                    throw new NumberFormatException();
+                }
                 System.out.println("Cумма цифр числа " + n + " равна " + (n / 10 + n % 10));
                 check = true;
             } catch (NumberFormatException new_exc) {
@@ -63,6 +66,10 @@ public class Main {
             try {
                 System.out.println("2.2 ------------------ \nВведите натуральное трехзначное число:");
                 n1 = Integer.parseInt(br.readLine());
+                if ((n1/1000 != 0) || (n1/100 == 0))
+                {
+                    throw new NumberFormatException();
+                }
                 System.out.println("Cумма цифр числа " + n1 + " равна " + (n1 / 100 + (n1 - (n1 / 100) * 100) / 10 + n1 % 10));
                 check = true;
             } catch (NumberFormatException new_exc)
@@ -83,6 +90,10 @@ public class Main {
                 d = Double.parseDouble(br.readLine());
                 res = (int) d;
                 res2 = d - res;
+                if (res2 == 0)
+                {
+                    throw new NumberFormatException();
+                }
                 if (res2 >= 0.5)
                 {
                     System.out.println("Округляем: " + (res+1));
@@ -164,6 +175,10 @@ public class Main {
             {
                 System.out.println("3.3 ------------------ \nВведите натуральное трехзначное число:");
                 int s = Integer.parseInt(br.readLine());
+                if ((s/1000 != 0) || (s/100 == 0))
+                {
+                    throw new NumberFormatException();
+                }
                 if (s/100 > (s-(s/100)*100)/10)
                 {
                     if (s/100 > s%10)
@@ -229,5 +244,68 @@ public class Main {
         }
 
        // ------------ task 3.5
-     }
+       System.out.println("\n3.5 ------------------");
+        int e = 5, b = 7, c = -9;
+        System.out.println("Числа в переменных a, b, c: " + e + " " + b + " " + c);
+        if ((e>b) && (e>c))
+        {
+            if (b>c)
+            {
+                System.out.println("Возрастающая последовательность: " + c + " " + b + " " + e);
+            }
+            else
+            {
+                System.out.println("Возрастающая последовательность: " + b + " " + c + " " + e);
+            }
+        }
+        else if ((b>e) && (b>c))
+        {
+            if (e>c)
+            {
+                System.out.println("Возрастающая последовательность: " + c + " " + e + " " + b);
+            }
+            else
+            {
+                System.out.println("Возрастающая последовательность: " + e + " " + c + " " + b);
+            }
+        }
+        else
+        {
+            if (b>e)
+            {
+                System.out.println("Возрастающая последовательность: " + e + " " + b + " " + c);
+            }
+            else
+            {
+                System.out.println("Возрастающая последовательность: " + b + " " + e + " " + c);
+            }
+        }
+
+        //---------------task 3.6
+        System.out.println("\n3.6 ------------------");
+        Random generator = new Random();
+        int rand_int = generator.nextInt(28800) + 1;
+        System.out.println(rand_int);
+        int hours = rand_int/3600;
+        switch(hours)
+        {
+            case 8:
+            case 7:
+            case 6:
+            case 5:
+                System.out.println("До конца рабочего дня осталось " + hours + " часов:-)");
+                break;
+            case 4:
+            case 3:
+            case 2:
+                System.out.println("До конца рабочего дня осталось " + hours + " часa:-)");
+                break;
+            case 1:
+                System.out.println("До конца рабочего дня остался " + hours + " час:-)");
+                break;
+            case 0:
+                System.out.println("До конца рабочего дня осталось менее часа:-)");
+                break;
+        }
+    }
 }
