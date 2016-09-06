@@ -42,7 +42,7 @@ public class Main {
             }
         }
 
-        //-------------task 2.1
+        //-------------task 2.1 and 2.3 the same
         check=false;
         while (check == false)
         {
@@ -71,7 +71,7 @@ public class Main {
             }
         }
 
-        //--------------task 2.4
+        //--------------task 2.4 and 2.5 the same
          double d, res2;
          int res;
          check = false;
